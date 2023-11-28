@@ -6,6 +6,7 @@ const morgan = require("morgan");
 const ejsMate = require("ejs-mate");
 const Joi = require("joi");
 // this is a model (like a class)
+const {campgroundSchema} = require("./schemas.js") 
 const Campground = require("./models/campground")
 const ExpressError = require("./utils/ExpressError")
 const catchAsync = require("./utils/catchAsync")
