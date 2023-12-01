@@ -6,8 +6,9 @@ const morgan = require("morgan");
 const ejsMate = require("ejs-mate");
 const Joi = require("joi");
 // this is a model (like a class)
-const {campgroundSchema} = require("./schemas.js") 
+const { campgroundSchema } = require("./schemas.js")
 const Campground = require("./models/campground")
+const Review = require("./models/review")
 const ExpressError = require("./utils/ExpressError")
 const catchAsync = require("./utils/catchAsync")
 
@@ -86,6 +87,18 @@ app.delete("/campgrounds/:id", catchAsync(async (req, res, next) => {
     const { id } = req.params;
     const campground = await Campground.findByIdAndDelete(id);
     res.redirect("/campgrounds");
+}))
+
+app.post("/campgrounds/:id/reviews", catchAsync(async (req, res) => {
+    // const { id } = req.params
+    console.log(req.params)
+    const campground = await Campground.findById(req.params.id);
+    // const campground = await new Campground.findById(id);
+    const review = new Review(req.body.review);
+    campground.reviews.push(review);
+    await campground.save()
+    await review.save()
+    res.redirect(`/campgrounds/${campground._id}`)
 }))
 
 app.all('*', (req, res) => {
