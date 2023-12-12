@@ -8,10 +8,16 @@ const session = require("express-session");
 const flash = require("connect-flash");
 // this is a model (like a class)
 const ExpressError = require("./utils/ExpressError")
-const catchAsync = require("./utils/catchAsync")
+
+const User = require("./models/user")
+
+const passport = require("passport")
+const localStrategy = require("passport-local")
+
 
 const campgroundRouter = require("./routes/campground.js")
 const reviewRouter = require("./routes/review.js")
+const userRouter = require("./routes/user.js")
 
 const app = express()
 
@@ -39,13 +45,23 @@ app.use(session(sessionConfig))
 app.use(flash())
 app.use((req, res, next) => {
     res.locals.success = req.flash("success");
+    res.locals.error = req.flash("error");
     next();
 })
+
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new localStrategy(User.authenticate()));
+
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
 app.use(session(sessionConfig))
 app.use(express.urlencoded({ extended: true }))
 app.use(methodOverride("_method"))
 app.use("/campgrounds", campgroundRouter)
 app.use("/campgrounds/:id/reviews/", reviewRouter)
+app.use("/", userRouter)
 app.use(express.static(path.join(__dirname, 'public')))
 
 
