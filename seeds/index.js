@@ -32,13 +32,14 @@ async function seedImg() {
 
 const seedDB = async () => {
     await Campground.deleteMany({})
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < 5; i++) {
         const price = Math.floor(Math.random() * 20) + 10
 
         // seed data into campground
         const camp = new Campground({
             location: `${sample(cities).city}, ${sample(cities).state}`,
             title: `${sample(descriptors)} ${sample(places)}`,
+            author: '657ab48a47b179396c4c1371',
             imageUrl: await seedImg(),
             // imageUrl: "https://images.unsplash.com/photo-1468221296755-1c53a9dbcd54?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             description:
