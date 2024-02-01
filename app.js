@@ -7,7 +7,6 @@ const path = require("path");
 const methodOverride = require('method-override')
 const mongoose = require("mongoose");
 const ejsMate = require("ejs-mate");
-const cookieParser = require("cookie-parser");
 const session = require("express-session");
 const flash = require("connect-flash");
 // this is a model (like a class)
@@ -34,6 +33,7 @@ async function maingoose() {
     console.log("Mongoose Connection Open")
 }
 
+// to pass into express-session object
 const sessionConfig = {
     secret: 'thisshouldbeabettersecret!',
     resave: false,
@@ -44,12 +44,15 @@ const sessionConfig = {
         maxAge: 1000 * 60 * 60 * 24 * 7
     }
 }
+
+// express-session object
 app.use(session(sessionConfig))
 
 app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(flash())
+
 app.use((req, res, next) => {
     res.locals.currentUser = req.user;
     res.locals.success = req.flash("success");
@@ -89,6 +92,5 @@ app.all('*', (req, res) => {
 // this is the error handler
 app.use((err, req, res, next) => {
     if (!err.statusCode) err.statusCode = 500;
-    // res.status(statusCode).send(`<h1>${message}</h1>`)
     res.status(err.statusCode).render("error", { err })
 })

@@ -1,4 +1,4 @@
-
+const User = require("../models/user")
 
 
 module.exports.renderRegister = (req, res) => {
@@ -8,6 +8,7 @@ module.exports.renderRegister = (req, res) => {
 module.exports.register = async (req, res, next) => {
     try {
         const { username, email, password } = req.body;
+        // console.log(username)
 
         const user = new User({ username, email });
         const registeredUser = await User.register(user, password);
