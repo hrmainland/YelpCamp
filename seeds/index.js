@@ -4,6 +4,12 @@ const axios = require("axios");
 const Campground = require("../models/campground")
 const { places, descriptors } = require('./seedHelpers');
 
+require('dotenv').config();
+const mbxGeocoding = require("@mapbox/mapbox-sdk/services/geocoding");
+const mapBoxToken = process.env.MAPBOX_TOKEN;
+const geocoder = mbxGeocoding({ accessToken: mapBoxToken });
+
+
 // fire up MONGOOSE
 maingoose().catch(err => console.log(err));
 
@@ -35,9 +41,18 @@ const seedDB = async () => {
     for (let i = 0; i < 5; i++) {
         const price = Math.floor(Math.random() * 20) + 10
 
+        const loco = `${sample(cities).city}, ${sample(cities).state}`
+
+        const geoData = await geocoder.forwardGeocode({
+            query: loco,
+            limit: 1
+        }).send();
+
+
+
         // seed data into campground
         const camp = new Campground({
-            location: `${sample(cities).city}, ${sample(cities).state}`,
+            location: loco,
             title: `${sample(descriptors)} ${sample(places)}`,
             author: '657ab48a47b179396c4c1371',
             // imageUrl: await seedImg(),
@@ -51,6 +66,7 @@ const seedDB = async () => {
                     filename: 'YelpCamp/ruyoaxgf72nzpi4y6cdi'
                 }
             ],
+            geometry: geoData.body.features[0].geometry,
             // imageUrl: "https://images.unsplash.com/photo-1468221296755-1c53a9dbcd54?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             description:
                 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, nihil tempora vel aspernatur quod aliquam illum! Iste impedit odio esse neque veniam molestiae eligendi commodi minus, beatae accusantium, doloribus quo!',
