@@ -37,8 +37,7 @@ async function seedImg() {
 }
 
 const seedDB = async () => {
-    await Campground.deleteMany({})
-    for (let i = 0; i < 25; i++) {
+    for (let i = 0; i < 300; i++) {
         const price = Math.floor(Math.random() * 20) + 10
 
         const loco = `${sample(cities).city}, ${sample(cities).state}`
@@ -58,11 +57,11 @@ const seedDB = async () => {
             // imageUrl: await seedImg(),
             images: [
                 {
-                    url: await seedImg(),
+                    url: null,
                     filename: 'YelpCamp/ahfnenvca4tha00h2ubt'
                 },
                 {
-                    url: await seedImg(),
+                    url: null,
                     filename: 'YelpCamp/ruyoaxgf72nzpi4y6cdi'
                 }
             ],
