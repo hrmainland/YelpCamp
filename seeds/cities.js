@@ -698,5 +698,845 @@ module.exports = [
     {
         city: "Katanning",
         state: "Western Australia",
+    },
+    {
+        city: "Narrabri",
+        state: "New South Wales",
+    },
+    {
+        city: "Stanthorpe",
+        state: "Queensland",
+    },
+    {
+        city: "Murgon",
+        state: "Queensland",
+    },
+    {
+        city: "Oberon",
+        state: "New South Wales",
+    },
+    {
+        city: "Winton",
+        state: "Queensland",
+    },
+    {
+        city: "Hughenden",
+        state: "Queensland",
+    },
+    {
+        city: "Ingham",
+        state: "Queensland",
+    },
+    {
+        city: "Nannup",
+        state: "Western Australia",
+    },
+    {
+        city: "Mudgee",
+        state: "New South Wales",
+    },
+    {
+        city: "Tenterfield",
+        state: "New South Wales",
+    },
+    {
+        city: "Blackall",
+        state: "Queensland",
+    },
+    {
+        city: "Clermont",
+        state: "Queensland",
+    },
+    {
+        city: "St Arnaud",
+        state: "Victoria",
+    },
+    {
+        city: "Lancelin",
+        state: "Western Australia",
+    },
+    {
+        city: "Merredin",
+        state: "Western Australia",
+    },
+    {
+        city: "Jamestown",
+        state: "South Australia",
+    },
+    {
+        city: "Goomalling",
+        state: "Western Australia",
+    },
+    {
+        city: "Quilpie",
+        state: "Queensland",
+    },
+    {
+        city: "Halls Creek",
+        state: "Western Australia",
+    },
+    {
+        city: "Corrigin",
+        state: "Western Australia",
+    },
+    {
+        city: "Morawa",
+        state: "Western Australia",
+    },
+    {
+        city: "Jerramungup",
+        state: "Western Australia",
+    },
+    {
+        city: "Wagin",
+        state: "Western Australia",
+    },
+    {
+        city: "Northam",
+        state: "Western Australia",
+    },
+    {
+        city: "Nyngan",
+        state: "New South Wales",
+    },
+    {
+        city: "Wudinna",
+        state: "South Australia",
+    },
+    {
+        city: "Katanning",
+        state: "Western Australia",
+    },
+    {
+        city: "Charleville",
+        state: "Queensland",
+    },
+    {
+        city: "Longreach",
+        state: "Queensland",
+    },
+    {
+        city: "Charters Towers",
+        state: "Queensland",
+    },
+    {
+        city: "Bourke",
+        state: "New South Wales",
+    },
+    {
+        city: "Condobolin",
+        state: "New South Wales",
+    },
+    {
+        city: "Gunnedah",
+        state: "New South Wales",
+    },
+    {
+        city: "Winton",
+        state: "Queensland",
+    },
+    {
+        city: "Tibooburra",
+        state: "New South Wales",
+    },
+    {
+        city: "Eidsvold",
+        state: "Queensland",
+    },
+    {
+        city: "Taroom",
+        state: "Queensland",
+    },
+    {
+        city: "Augathella",
+        state: "Queensland",
+    },
+    {
+        city: "Meandarra",
+        state: "Queensland",
+    },
+    {
+        city: "Monto",
+        state: "Queensland",
+    },
+    {
+        city: "Eulo",
+        state: "Queensland",
+    },
+    {
+        city: "Yowah",
+        state: "Queensland",
+    },
+    {
+        city: "Towomba",
+        state: "Queensland",
+    },
+    {
+        city: "Dalby",
+        state: "Queensland",
+    },
+    {
+        city: "Warwick",
+        state: "Queensland",
+    },
+    {
+        city: "Stanthorpe",
+        state: "Queensland",
+    },
+    {
+        city: "Clermont",
+        state: "Queensland",
+    },
+    {
+        city: "Emerald",
+        state: "Queensland",
+    },
+    {
+        city: "Biloela",
+        state: "Queensland",
+    },
+    {
+        city: "Moura",
+        state: "Queensland",
+    },
+    {
+        city: "Miles",
+        state: "Queensland",
+    },
+    {
+        city: "Goondiwindi",
+        state: "Queensland",
+    },
+    {
+        city: "Warialda",
+        state: "New South Wales",
+    },
+    {
+        city: "Tenterfield",
+        state: "New South Wales",
+    },
+    {
+        city: "Inverell",
+        state: "New South Wales",
+    },
+    {
+        city: "Narrabri",
+        state: "New South Wales",
+    },
+    {
+        city: "Mudgee",
+        state: "New South Wales",
+    },
+    {
+        city: "Gulgong",
+        state: "New South Wales",
+    },
+    {
+        city: "Coolah",
+        state: "New South Wales",
+    },
+    {
+        city: "Scone",
+        state: "New South Wales",
+    },
+    {
+        city: "Walcha",
+        state: "New South Wales",
+    },
+    {
+        city: "Armidale",
+        state: "New South Wales",
+    },
+    {
+        city: "Tamworth",
+        state: "New South Wales",
+    },
+    {
+        city: "Gunnedah",
+        state: "New South Wales",
+    },
+    {
+        city: "Quirindi",
+        state: "New South Wales",
+    },
+    {
+        city: "Muswellbrook",
+        state: "New South Wales",
+    },
+    {
+        city: "Singleton",
+        state: "New South Wales",
+    },
+    {
+        city: "Merriwa",
+        state: "New South Wales",
+    },
+    {
+        city: "Denman",
+        state: "New South Wales",
+    },
+    {
+        city: "Murrurundi",
+        state: "New South Wales",
+    },
+    {
+        city: "Scone",
+        state: "New South Wales",
+    },
+    {
+        city: "Dungog",
+        state: "New South Wales",
+    },
+    {
+        city: "Branxton",
+        state: "New South Wales",
+    },
+    {
+        city: "Cessnock",
+        state: "New South Wales",
+    },
+    {
+        city: "Pokolbin",
+        state: "New South Wales",
+    },
+    {
+        city: "Broke",
+        state: "New South Wales",
+    },
+    {
+        city: "Kurri Kurri",
+        state: "New South Wales",
+    },
+    {
+        city: "West Wallsend",
+        state: "New South Wales",
+    },
+    {
+        city: "Cardiff",
+        state: "New South Wales",
+    },
+    {
+        city: "Gosford",
+        state: "New South Wales",
+    },
+    {
+        city: "Wyong",
+        state: "New South Wales",
+    },
+    {
+        city: "The Entrance",
+        state: "New South Wales",
+    },
+    {
+        city: "Toukley",
+        state: "New South Wales",
+    },
+    {
+        city: "Swansea",
+        state: "New South Wales",
+    },
+    {
+        city: "Belmont",
+        state: "New South Wales",
+    },
+    {
+        city: "Charlestown",
+        state: "New South Wales",
+    },
+    {
+        city: "Warners Bay",
+        state: "New South Wales",
+    },
+    {
+        city: "Toronto",
+        state: "New South Wales",
+    },
+    {
+        city: "Morpeth",
+        state: "New South Wales",
+    },
+    {
+        city: "Raymond Terrace",
+        state: "New South Wales",
+    },
+    {
+        city: "Nelson Bay",
+        state: "New South Wales",
+    },
+    {
+        city: "Karuah",
+        state: "New South Wales",
+    },
+    {
+        city: "Bulahdelah",
+        state: "New South Wales",
+    },
+    {
+        city: "Tea Gardens",
+        state: "New South Wales",
+    },
+    {
+        city: "Hawks Nest",
+        state: "New South Wales",
+    },
+    {
+        city: "Stroud",
+        state: "New South Wales",
+    },
+    {
+        city: "Bungwahl",
+        state: "New South Wales",
+    },
+    {
+        city: "Forster",
+        state: "New South Wales",
+    },
+    {
+        city: "Tuncurry",
+        state: "New South Wales",
+    },
+    {
+        city: "Pacific Palms",
+        state: "New South Wales",
+    },
+    {
+        city: "Smiths Lake",
+        state: "New South Wales",
+    },
+    {
+        city: "Blueys Beach",
+        state: "New South Wales",
+    },
+    {
+        city: "Elizabeth Beach",
+        state: "New South Wales",
+    },
+    {
+        city: "Boomerang Beach",
+        state: "New South Wales",
+    },
+    {
+        city: "Charlotte Bay",
+        state: "New South Wales",
+    },
+    {
+        city: "Coomba Park",
+        state: "New South Wales",
+    },
+    {
+        city: "Failford",
+        state: "New South Wales",
+    },
+    {
+        city: "Buladelah",
+        state: "New South Wales",
+    },
+    {
+        city: "Myall Lakes",
+        state: "New South Wales",
+    },
+    {
+        city: "Hawks Nest",
+        state: "New South Wales",
+    },
+    {
+        city: "Manning Point",
+        state: "New South Wales",
+    },
+    {
+        city: "Old Bar",
+        state: "New South Wales",
+    },
+    {
+        city: "Taree",
+        state: "New South Wales",
+    },
+    {
+        city: "Wingham",
+        state: "New South Wales",
+    },
+    {
+        city: "Laurieton",
+        state: "New South Wales",
+    },
+    {
+        city: "Kendall",
+        state: "New South Wales",
+    },
+    {
+        city: "Port Macquarie",
+        state: "New South Wales",
+    },
+    {
+        city: "Dunbogan",
+        state: "New South Wales",
+    },
+    {
+        city: "North Haven",
+        state: "New South Wales",
+    },
+    {
+        city: "Lake Cathie",
+        state: "New South Wales",
+    },
+    {
+        city: "Bonny Hills",
+        state: "New South Wales",
+    },
+    {
+        city: "Lake Cathie",
+        state: "New South Wales",
+    },
+    {
+        city: "Kew",
+        state: "New South Wales",
+    },
+    {
+        city: "Forster",
+        state: "New South Wales",
+    },
+    {
+        city: "Tuncurry",
+        state: "New South Wales",
+    },
+    {
+        city: "Coomba Park",
+        state: "New South Wales",
+    },
+    {
+        city: "Failford",
+        state: "New South Wales",
+    },
+    {
+        city: "Bulahdelah",
+        state: "New South Wales",
+    },
+    {
+        city: "Myall Lakes",
+        state: "New South Wales",
+    },
+    {
+        city: "Smiths Lake",
+        state: "New South Wales",
+    },
+    {
+        city: "Blueys Beach",
+        state: "New South Wales",
+    },
+    {
+        city: "Elizabeth Beach",
+        state: "New South Wales",
+    },
+    {
+        city: "Boomerang Beach",
+        state: "New South Wales",
+    },
+    {
+        city: "Charlotte Bay",
+        state: "New South Wales",
+    },
+    {
+        city: "Pacific Palms",
+        state: "New South Wales",
+    },
+    {
+        city: "Tea Gardens",
+        state: "New South Wales",
+    },
+    {
+        city: "Hawks Nest",
+        state: "New South Wales",
+    },
+    {
+        city: "Stroud",
+        state: "New South Wales",
+    },
+    {
+        city: "Bungwahl",
+        state: "New South Wales",
+    },
+    {
+        city: "South West Rocks",
+        state: "New South Wales",
+    },
+    {
+        city: "Hat Head",
+        state: "New South Wales",
+    },
+    {
+        city: "Crescent Head",
+        state: "New South Wales",
+    },
+    {
+        city: "Kempsey",
+        state: "New South Wales",
+    },
+    {
+        city: "Frederickton",
+        state: "New South Wales",
+    },
+    {
+        city: "Kundabung",
+        state: "New South Wales",
+    },
+    {
+        city: "Telegraph Point",
+        state: "New South Wales",
+    },
+    {
+        city: "Port Macquarie",
+        state: "New South Wales",
+    },
+    {
+        city: "Lakewood",
+        state: "New South Wales",
+    },
+    {
+        city: "Lake Cathie",
+        state: "New South Wales",
+    },
+    {
+        city: "Bonny Hills",
+        state: "New South Wales",
+    },
+    {
+        city: "Kew",
+        state: "New South Wales",
+    },
+    {
+        city: "Wauchope",
+        state: "New South Wales",
+    },
+    {
+        city: "Kendall",
+        state: "New South Wales",
+    },
+    {
+        city: "Comboyne",
+        state: "New South Wales",
+    },
+    {
+        city: "Laurieton",
+        state: "New South Wales",
+    },
+    {
+        city: "North Haven",
+        state: "New South Wales",
+    },
+    {
+        city: "Lake Cathie",
+        state: "New South Wales",
+    },
+    {
+        city: "Bonny Hills",
+        state: "New South Wales",
+    },
+    {
+        city: "Lake Cathie",
+        state: "New South Wales",
+    },
+    {
+        city: "Dunbogan",
+        state: "New South Wales",
+    },
+    {
+        city: "Lakewood",
+        state: "New South Wales",
+    },
+    {
+        city: "Kew",
+        state: "New South Wales",
+    },
+    {
+        city: "Lake Cathie",
+        state: "New South Wales",
+    },
+    {
+        city: "Kendall",
+        state: "New South Wales",
+    },
+    {
+        city: "Comboyne",
+        state: "New South Wales",
+    },
+    {
+        city: "Laurieton",
+        state: "New South Wales",
+    },
+    {
+        city: "North Haven",
+        state: "New South Wales",
+    },
+    {
+        city: "Port Macquarie",
+        state: "New South Wales",
+    },
+    {
+        city: "Bonny Hills",
+        state: "New South Wales",
+    },
+    {
+        city: "Lake Cathie",
+        state: "New South Wales",
+    },
+    {
+        city: "Harrington",
+        state: "New South Wales",
+    },
+    {
+        city: "Old Bar",
+        state: "New South Wales",
+    },
+    {
+        city: "Wallabi Point",
+        state: "New South Wales",
+    },
+    {
+        city: "Taree",
+        state: "New South Wales",
+    },
+    {
+        city: "Wingham",
+        state: "New South Wales",
+    },
+    {
+        city: "Cundletown",
+        state: "New South Wales",
+    },
+    {
+        city: "Nabiac",
+        state: "New South Wales",
+    },
+    {
+        city: "Failford",
+        state: "New South Wales",
+    },
+    {
+        city: "Tinonee",
+        state: "New South Wales",
+    },
+    {
+        city: "Coopernook",
+        state: "New South Wales",
+    },
+    {
+        city: "Hannam Vale",
+        state: "New South Wales",
+    },
+    {
+        city: "Johns River",
+        state: "New South Wales",
+    },
+    {
+        city: "Kendall",
+        state: "New South Wales",
+    },
+    {
+        city: "Laurieton",
+        state: "New South Wales",
+    },
+    {
+        city: "Lake Cathie",
+        state: "New South Wales",
+    },
+    {
+        city: "Bonny Hills",
+        state: "New South Wales",
+    },
+    {
+        city: "Lake Cathie",
+        state: "New South Wales",
+    },
+    {
+        city: "Dunbogan",
+        state: "New South Wales",
+    },
+    {
+        city: "Lakewood",
+        state: "New South Wales",
+    },
+    {
+        city: "Kew",
+        state: "New South Wales",
+    },
+    {
+        city: "Lake Cathie",
+        state: "New South Wales",
+    },
+    {
+        city: "Kendall",
+        state: "New South Wales",
+    },
+    {
+        city: "Comboyne",
+        state: "New South Wales",
+    },
+    {
+        city: "Laurieton",
+        state: "New South Wales",
+    },
+    {
+        city: "North Haven",
+        state: "New South Wales",
+    },
+    {
+        city: "Port Macquarie",
+        state: "New South Wales",
+    },
+    {
+        city: "Bonny Hills",
+        state: "New South Wales",
+    },
+    {
+        city: "Lake Cathie",
+        state: "New South Wales",
+    },
+    {
+        city: "Harrington",
+        state: "New South Wales",
+    },
+    {
+        city: "Old Bar",
+        state: "New South Wales",
+    },
+    {
+        city: "Wallabi Point",
+        state: "New South Wales",
+    },
+    {
+        city: "Taree",
+        state: "New South Wales",
+    },
+    {
+        city: "Wingham",
+        state: "New South Wales",
+    },
+    {
+        city: "Cundletown",
+        state: "New South Wales",
+    },
+    {
+        city: "Nabiac",
+        state: "New South Wales",
+    },
+    {
+        city: "Failford",
+        state: "New South Wales",
+    },
+    {
+        city: "Tinonee",
+        state: "New South Wales",
+    },
+    {
+        city: "Coopernook",
+        state: "New South Wales",
+    },
+    {
+        city: "Hannam Vale",
+        state: "New South Wales",
+    },
+    {
+        city: "Johns River",
+        state: "New South Wales",
     }
 ]
