@@ -4,7 +4,9 @@ const axios = require("axios");
 const Campground = require("../models/campground")
 const { places, descriptors } = require('./seedHelpers');
 
-require('dotenv').config();
+if (process.env.NODE_ENV !== "production") {
+    require('dotenv').config();
+}
 const mbxGeocoding = require("@mapbox/mapbox-sdk/services/geocoding");
 const mapBoxToken = process.env.MAPBOX_TOKEN;
 const geocoder = mbxGeocoding({ accessToken: mapBoxToken });
