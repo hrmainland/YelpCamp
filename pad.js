@@ -13,6 +13,6 @@ async function main() {
     console.log(geoData.body.features[0].geometry)
 }
 
-// commen
+// commenting
 
 main();
