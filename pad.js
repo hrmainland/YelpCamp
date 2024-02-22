@@ -7,7 +7,7 @@ const geocoder = mbxGeocoding({ accessToken: mapBoxToken });
 
 async function main() {
     const geoData = await geocoder.forwardGeocode({
-        query: "Casa De Las Conchas, Salamanca, Spain",
+        query: "Casa De Las Conchas, Salamanca, Espana",
         limit: 1
     }).send()
     console.log(geoData.body.features[0].geometry)
