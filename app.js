@@ -8,6 +8,7 @@ const methodOverride = require('method-override')
 const mongoose = require("mongoose");
 const ejsMate = require("ejs-mate");
 const session = require("express-session");
+const MongoStore = require('connect-mongo');
 const flash = require("connect-flash");
 const helmet = require('helmet');
 // this is a model (like a class)
@@ -24,6 +25,10 @@ const campgroundRouter = require("./routes/campground.js")
 const reviewRouter = require("./routes/review.js")
 const userRouter = require("./routes/user.js")
 
+const dbUrl = process.env.DB_URL;
+// const dbUrl = 'mongodb://127.0.0.1:27017/yelp-camp'
+
+
 const app = express()
 
 // fire up MONGOOSE
@@ -31,7 +36,7 @@ maingoose().catch(err => console.log(err));
 
 // mongoose main function
 async function maingoose() {
-    await mongoose.connect('mongodb://127.0.0.1:27017/yelp-camp');
+    await mongoose.connect(dbUrl);
     console.log("Mongoose Connection Open")
 }
 
@@ -46,8 +51,21 @@ app.use(mongoSanitize({
     replaceWith: '_'
 }))
 
+const store = MongoStore.create({
+    mongoUrl: dbUrl,
+    touchAfter: 24 * 60 * 60,
+    crypto: {
+        secret: 'thisshouldbeabettersecret!'
+    }
+});
+
+store.on("error", function (e) {
+    console.log("SESSION STORE ERROR", e)
+})
+
 // to pass into express-session object
 const sessionConfig = {
+    store,
     name: 'session',
     secret: 'thisshouldbeabettersecret!',
     resave: false,

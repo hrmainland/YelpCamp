@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": "18.13.0"
+  },
   "name": "yelpcamp",
   "version": "1.0.0",
   "description": "",
@@ -14,6 +17,7 @@
     "axios": "^1.6.2",
     "cloudinary": "^1.41.1",
     "connect-flash": "^0.1.1",
+    "connect-mongo": "^5.1.0",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.4.4",
     "ejs": "^3.1.9",
