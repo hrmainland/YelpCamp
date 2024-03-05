@@ -43,8 +43,6 @@ const CampgroundSchema = new Schema({
     }],
 }, opts)
 
-const bla = "bla"
-
 CampgroundSchema.virtual('properties.id').get(function () {
     return `${this.id}`;
 });

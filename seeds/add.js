@@ -39,7 +39,7 @@ async function seedImg() {
 }
 
 const seedDB = async () => {
-    for (let i = 0; i < 300; i++) {
+    for (let i = 0; i < 25; i++) {
         const price = Math.floor(Math.random() * 20) + 10
 
         const loco = `${sample(cities).city}, ${sample(cities).state}`

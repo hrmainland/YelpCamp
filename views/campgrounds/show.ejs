@@ -39,7 +39,7 @@
                         <%= campground.location%>
                     </li>
                     <li class="list-group-item">
-                        Listed by <%= campground.author.username%>
+                         Listed by <%= campground.author.username%>
                     </li>
                     <li class="list-group-item">$<%= campground.price%>/night</li>
                 </ul>
@@ -97,7 +97,8 @@
                         <div class="card mb-3 ">
                             <div class="card-body">
                                 <h5 class="card-title">
-                                    <%= review.author.username%>
+                                    title
+                                    <%= review.author.username %>
                                 </h5>
                                 <p class="starability-result" data-rating="<%= review.rating %>">
                                     Rated: <%= review.rating %> stars
@@ -117,9 +118,11 @@
         </div>
     </div>
 
+    ejs
+
     <script>
         const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
-        var campground = '<%- JSON.stringify(campground) %>';
+        var campground = `<%- JSON.stringify(campground) %>`;
     </script>
 
     <script src="/javascripts/showPageMap.js"></script>

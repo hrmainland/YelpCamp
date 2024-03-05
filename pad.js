@@ -1,18 +1,32 @@
-if (process.env.NODE_ENV !== "production") {
-    require('dotenv').config();
+const cities = [
+  {
+    city: "Gold Coast",
+    state: "Queensland",
+  },
+  {
+    city: "Newcastle",
+    state: "New South Wales",
+  },
+  {
+    city: "Sunshine Coast",
+    state: "Queensland",
+  },
+  {
+    city: "Wollongong",
+    state: "New South Wales",
+  },
+  {
+    city: "Hobart",
+    state: "Tasmania",
+  },
+];
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
 }
-const mbxGeocoding = require("@mapbox/mapbox-sdk/services/geocoding");
-const mapBoxToken = process.env.MAPBOX_TOKEN;
-const geocoder = mbxGeocoding({ accessToken: mapBoxToken });
 
-async function main() {
-    const geoData = await geocoder.forwardGeocode({
-        query: "Casa De Las Conchas, Salamanca, Espana",
-        limit: 1
-    }).send()
-    console.log(geoData.body.features[0].geometry)
-}
-
-// commenting
-
-main();
+console.log(shuffleArray(cities));
