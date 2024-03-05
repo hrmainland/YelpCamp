@@ -14,11 +14,21 @@ const mbxGeocoding = require("@mapbox/mapbox-sdk/services/geocoding");
 const mapBoxToken = process.env.MAPBOX_TOKEN;
 const geocoder = mbxGeocoding({ accessToken: mapBoxToken });
 
-if (process.env.NODE_ENV === "development") {
-}
-
 const OpenAI = require("openai");
 const openai = new OpenAI();
+
+const numNew = process.argv[3];
+const action = process.argv[2];
+
+if (
+  process.argv.length != 4 ||
+  !["new", "add"].includes(action) ||
+  !Number(numNew) > 0
+) {
+  throw new Error(
+    "Use the arguments new/add and the number of campsites \neg. add 15 or new 25"
+  );
+}
 
 const dbUrl =
   process.env.NODE_ENV === "development"
@@ -45,7 +55,8 @@ async function gptDescription(campName, location) {
       {
         role: "user",
         content: `Give me an example description of about 50 words for a campground named ${campName} which is in ${location}.\
-        Do not mention the name of the campground and write it in the tone of a real user on a website like Yelp.`,
+        Do not mention the name of the campground and write it in the tone of a real user on a website like Yelp.\
+        Start with a description and talk about the location later.`,
       },
     ],
     model: "gpt-3.5-turbo",
@@ -81,11 +92,11 @@ async function seedImg() {
 }
 
 const seedDB = async () => {
-  await Campground.deleteMany({});
+  if (action === "new") await Campground.deleteMany({});
 
   const shuffledLocations = shuffleArray(cities);
 
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < numNew; i++) {
     const price = Math.floor(Math.random() * 20) + 10;
 
     const location = `${shuffledLocations[i].city}, ${shuffledLocations[i].state}`;
@@ -98,25 +109,28 @@ const seedDB = async () => {
       .send();
 
     const campName = `${sample(descriptors)} ${sample(places)}`;
+    const description = await gptDescription(campName, location).replace(
+      /"/g,
+      ""
+    );
 
     // seed data into campground
     const camp = new Campground({
       location,
       title: campName,
       author: seedUserID,
-      // imageUrl: await seedImg(),
       images: [
         {
           url: await seedImg(),
           filename: "YelpCamp/ahfnenvca4tha00h2ubt",
         },
-        // {
-        //   url: await seedImg(),
-        //   filename: "YelpCamp/ruyoaxgf72nzpi4y6cdi",
-        // },
+        {
+          url: await seedImg(),
+          filename: "YelpCamp/ruyoaxgf72nzpi4y6cdi",
+        },
       ],
       geometry: geoData.body.features[0].geometry,
-      description: await gptDescription(campName, location),
+      description,
       price,
     });
 
