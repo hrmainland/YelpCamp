@@ -1,1 +1,2 @@
-console.log(process.argv);
+let a = "abc".replace("a", "z");
+console.log(a);

@@ -26,9 +26,11 @@ const reviewRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
 
 const dbUrl =
-  process.env.NODE_ENV === "development"
-    ? "mongodb://127.0.0.1:27017/yelp-camp"
-    : process.env.DB_URL;
+  process.env.NODE_ENV === "production"
+    ? process.env.DB_URL
+    : "mongodb://127.0.0.1:27017/yelp-camp";
+
+console.log("dbUrl :>> ", dbUrl);
 
 const app = express();
 
@@ -63,8 +65,6 @@ const store = MongoStore.create({
     secret,
   },
 });
-
-console.log("system.process.NODE_ENV :>> ", process.env.NODE_ENV);
 
 store.on("error", function (e) {
   console.log("SESSION STORE ERROR", e);

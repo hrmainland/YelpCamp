@@ -109,10 +109,8 @@ const seedDB = async () => {
       .send();
 
     const campName = `${sample(descriptors)} ${sample(places)}`;
-    const description = await gptDescription(campName, location).replace(
-      /"/g,
-      ""
-    );
+    var description = await gptDescription(campName, location);
+    description = description.replace(/"/g, "");
 
     // seed data into campground
     const camp = new Campground({
