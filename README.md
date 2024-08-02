@@ -19,4 +19,4 @@ For the sample descriptions [ChatGPTs API](https://platform.openai.com/docs/api-
 
 [Cloudinary](https://cloudinary.com/) is used for image hosting.
 
-Go and check it out [here](https://yelpcamp-n23a.onrender.com/)
+Go and check it out [here](https://yelpcamp-n23a.onrender.com/)!
