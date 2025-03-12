@@ -9,7 +9,7 @@ Currently the project uses sample data generated via calls to OpenAI's GPT API.
 The project is fully hosted and features an interactive map, allowing users to search for campsites visually.
 
 ## The Implementation
-This project uses [Express](https://expressjs.com/) and [MongoDB](https://www.mongodb.com/) on the backend with [Embedded JavaScript templating](https://ejs.co/) for the frontend rendering.
+This project uses [Express](https://expressjs.com/) and [MongoDB](https://www.mongodb.com/) on the backend with [Embedded JavaScript templating](https://ejs.co/) for frontend rendering.
 [Mapbox](https://www.mapbox.com/) is used for rendering maps, [Unsplash](https://unsplash.com/) is used for images.
 For the sample descriptions [ChatGPTs API](https://platform.openai.com/docs/api-reference/introduction) is used with the following prompt:
 
