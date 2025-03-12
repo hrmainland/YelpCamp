@@ -1,7 +1,7 @@
 # YelpCamp
 
 ## Let Me See It!
-A hosted version of this website is available [here](https://yelpcamp-n23a.onrender.com/)
+A hosted version of this website is available [here](https://yelpcamp-n23a.onrender.com/).
 
 ## The Concept
 This is a full-stack project built to allow users to upload campsites along with descriptions, photos and details. Others can then comment and review the campsites that they stay at.
@@ -19,4 +19,4 @@ For the sample descriptions [ChatGPTs API](https://platform.openai.com/docs/api-
 
 [Cloudinary](https://cloudinary.com/) is used for image hosting.
 
-Go and check it out [here](https://yelpcamp-n23a.onrender.com/)
+Go and check it out [here](https://yelpcamp-n23a.onrender.com/)!
