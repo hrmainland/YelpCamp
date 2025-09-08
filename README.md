@@ -1,22 +1,36 @@
 # YelpCamp
 
-## Let Me See It!
-A hosted version of this website is available [here](https://yelpcamp-n23a.onrender.com/).
+A full-stack campground review platform that allows users to discover, share, and review campsites with an interactive mapping interface.
 
-## The Concept
-This is a full-stack project built to allow users to upload campsites along with descriptions, photos and details. Others can then comment and review the campsites that they stay at.
-Currently the project uses sample data generated via calls to OpenAI's GPT API.
-The project is fully hosted and features an interactive map, allowing users to search for campsites visually.
+## Live Demo
+View the hosted application: [https://yelpcamp-n23a.onrender.com/](https://yelpcamp-n23a.onrender.com/)
 
-## The Implementation
-This project uses [Express](https://expressjs.com/) and [MongoDB](https://www.mongodb.com/) on the backend with [Embedded JavaScript templating](https://ejs.co/) for frontend rendering.
-[Mapbox](https://www.mapbox.com/) is used for rendering maps, [Unsplash](https://unsplash.com/) is used for images.
-For the sample descriptions [ChatGPTs API](https://platform.openai.com/docs/api-reference/introduction) is used with the following prompt:
+## Overview
+YelpCamp is a comprehensive campground management platform that enables users to:
+- Upload and share campsite information with descriptions, photos, and location details
+- Browse and search campsites using an interactive map interface
+- Leave comments and reviews for campsites they've visited
+- Explore sample campground data generated with AI assistance
+
+## Technology Stack
+
+### Backend
+- **Framework**: [Express.js](https://expressjs.com/)
+- **Database**: [MongoDB](https://www.mongodb.com/)
+- **Template Engine**: [EJS (Embedded JavaScript)](https://ejs.co/)
+
+### Frontend & Services
+- **Mapping**: [Mapbox](https://www.mapbox.com/)
+- **Image Source**: [Unsplash](https://unsplash.com/)
+- **Image Hosting**: [Cloudinary](https://cloudinary.com/)
+- **AI Content Generation**: [OpenAI GPT API](https://platform.openai.com/docs/api-reference/introduction)
+
+## AI-Generated Content
+Sample campground descriptions are generated using OpenAI's API with the following prompt structure:
 
 > Give me an example description of about 50 words for a campground named ${campName} which is in ${location}.
 > Do not mention the name of the campground and write it in the tone of a real user on a website like Yelp.
 > Start with a description and talk about the location later.
 
-[Cloudinary](https://cloudinary.com/) is used for image hosting.
-
-Go and check it out [here](https://yelpcamp-n23a.onrender.com/)!
+## Getting Started
+Visit the live application: [https://yelpcamp-n23a.onrender.com/](https://yelpcamp-n23a.onrender.com/)
